@@ -1,0 +1,21 @@
+입력 N
+입력 S M L XL XXL XXXL
+입력 T P
+
+(항등식 N = S + M + L + XL + XXL + XXXL)
+
+정수 result_t = 0
+정수 result_p = [0, 0]
+
+반복 i -> S 부터 XXXL 까지:
+    만약 i % T == 0:
+        result_t += i / T
+    아니라면:
+        result_t += (i // T) + 1
+반복 종료
+
+result_p[0] = N // P
+result_p[1] = N % P
+
+출력 result_t
+출력 result_p
