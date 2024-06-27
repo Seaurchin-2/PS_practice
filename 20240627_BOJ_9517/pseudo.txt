@@ -1,0 +1,30 @@
+// https://www.acmicpc.net/problem/9517 - 아이 러브 크로아티아
+
+입력 K
+입력 N
+질문들 = []  // 원소 : (시간, 대답)
+
+number = K
+current_time = 0
+MAX_TIME = 210  // 3분 30초
+
+반복 N번:
+    입력 T Z
+    질문들 추가 (T, Z)
+반복 종료
+
+반복 p <- 질문들:
+    current_time += p[0]
+    
+    만약 current_time > MAX_TIME:
+        반복 탈출
+
+    만약 p[1] == 'T':
+        number++
+        만약 number > 8:
+            number -= 8
+    아니라면:
+        건너뛰기
+반복 종료
+
+출력 number
