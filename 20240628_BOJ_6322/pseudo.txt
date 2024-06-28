@@ -1,0 +1,31 @@
+// https://www.acmicpc.net/problem/6322 - 직각 삼각형의 두 변
+
+count = 1
+반복:
+    입력 a b c  // a,b,c <= 10000
+    
+    만약 a==0 그리고 b==0 그리고 c==0:
+        반복 탈출
+
+    출력 "Triangle #" count
+    
+    result = 0.0  // 소수점 셋째 자리까지
+
+    만약 a == -1:
+        만약 b >= c:
+            출력 "Impossible."
+        아니라면:
+            result = sqrt(c^2-b^2)
+            출력 a " = " result
+    아니라면 만약 b == -1:
+        만약 a >= c:
+            출력 "Impossible."
+        아니라면:
+            result = sqrt(c^2-a^2)
+            출력 b " = " result
+    아니라면 만약 c == -1:
+        result = sqrt(a^2 + b^2)
+        출력 c " = " result
+    
+    count++
+반복 종료
