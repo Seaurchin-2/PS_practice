@@ -1,0 +1,12 @@
+// https://www.acmicpc.net/problem/24923
+
+input line
+
+if line[-3:] != 'eh?'
+{
+    print 'Imposter!'
+}
+else
+{
+    print 'Canadian!'
+}
