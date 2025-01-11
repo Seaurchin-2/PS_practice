@@ -1,0 +1,12 @@
+// https://www.acmicpc.net/problem/31526
+
+input r, c
+
+if r == 1
+{
+    print 0
+}
+else
+{
+    print (r * ((r-1)^(c-1))) % 998244353
+}
