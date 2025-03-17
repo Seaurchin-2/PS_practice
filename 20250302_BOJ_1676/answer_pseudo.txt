@@ -1,0 +1,15 @@
+https://www.acmicpc.net/problem/1676
+
+input N   (1 <= N <= 500)
+
+answer = 0
+
+for i in [1, ... N]
+{
+    if i % (5^q) == 0   (q = 1 or 2 or 3)
+    {
+        answer += q
+    }
+}
+
+print answer
